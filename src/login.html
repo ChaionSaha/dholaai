@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhoolai</title>
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body>
+    <div class="w-screen h-screen flex justify-center items-center px-5">
+      <div
+        class="px-7 py-16 shadow rounded-xl lg:w-[30%] w-full max-w-[550px] flex flex-col items-center"
+      >
+        <img src="./assets/logo.png" class="h-20 w-fit" />
+        <form class="mt-14 flex flex-col gap-y-2 w-full">
+          <div class="flex flex-col w-full">
+            <label for="username" class="text-sm">Username</label>
+            <input
+              type="text"
+              id="username"
+              class="input input-bordered input-primary mt-3"
+            />
+          </div>
+          <div class="flex flex-col w-full">
+            <label for="password" class="text-sm">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="input input-bordered input-primary mt-3"
+            />
+          </div>
+          <button class="btn btn-primary text-white mt-12 self-start px-14">
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

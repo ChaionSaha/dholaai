@@ -1,0 +1,16 @@
+{
+  "name": "dholaai",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "watch": "tailwindcss -i ./css/input.css -o ./css/output.css --watch"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "daisyui": "^4.12.13",
+    "tailwindcss": "^3.4.14"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhoolai</title>
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+
+  <body>
+    <div class="flex h-screen">
+      <!-- Sidebar (add this to header.ejs file) -->
+      <div
+        class="w-[17%] shadow flex flex-col py-10 max-w-[405px] overflow-y-auto sidebar"
+      >
+        <img src="../assets/logo.png" class="h-14 w-fit self-center" alt="" />
+        <ul class="ps-14 mt-10 flex flex-col gap-y-7">
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/user-list-icon.png"
+                alt=""
+                class="w-6 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">User List</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/banners-icon.png" alt="" class="w-6 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Banners</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/add-location-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Add Location</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/category-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Category</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/special-offer-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Special Icon</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/products-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Products</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/support-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Support</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/contact-us-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Contact Us</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/settings-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Settings</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/agent-list-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Agents List</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/laundry-shop-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Laundry Shop</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/orders-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Orders</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/withdraw-balance-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Withdraw Balance</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/payment-history-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Payment History</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-grow py-12 px-10 h-full overflow-y-auto">
+        <!-- header section -->
+        <div class="flex justify-end items-center gap-x-6">
+          <div class="flex items-center gap-x-3">
+            <img src="../assets/user.png" alt="" class="w-14" />
+            <p class="font-bold text-xl">Admin</p>
+          </div>
+          <button class="btn btn-ghost btn-primary text-xl text-primary">
+            Logout
+          </button>
+        </div>
+
+        <div class="mt-16">
+          <div class="flex items-center justify-between border-b pb-7">
+            <p class="text-3xl text-base-300 font-semibold">Special Offer</p>
+          </div>
+
+          <div class="overflow-x-auto mt-10 shadow rounded-lg p-10">
+            <p class="text-primary text-lg mb-10">
+              You only need to enter the basic information when you create the
+              categories.
+            </p>
+            <form class="w-full flex flex-col gap-10 gap-x-20 lg:w-[50%]">
+              <label class="form-control">
+                <p class="text-lg mb-5">Image</p>
+                <div
+                  class="py-9 text-primary px-10 border border-primary border-dashed flex items-center justify-center flex-col rounded-lg"
+                >
+                  <img src="../assets/add-icon.png" alt="" class="w-10" />
+                  <p class="mt-4 text-center">Click here to drop png, svg</p>
+                </div>
+                <input type="file" class="hidden" />
+              </label>
+              <label class="form-control w-full">
+                <p class="label-text mb-3 font-semibold">Offer Name</p>
+                <input
+                  type="text"
+                  class="input input-bordered input-primary disabled:bg-transparent disabled:text-black disabled:border-primary"
+                  value="Dhaka"
+                />
+              </label>
+              <label class="form-control w-full">
+                <p class="label-text mb-3 font-semibold">Discount</p>
+                <input
+                  type="text"
+                  class="input input-bordered input-primary disabled:bg-transparent disabled:text-black disabled:border-primary"
+                  value="Dhaka"
+                />
+              </label>
+              <label class="form-control">
+                <p class="label-text mb-3 font-semibold">Offer Details</p>
+                <textarea
+                  class="textarea textarea-bordered textarea-primary h-24 disabled:bg-transparent disabled:text-black disabled:border-primary"
+                  placeholder="Bio"
+                >
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, hic.</textarea
+                >
+              </label>
+              <label class="form-control w-full">
+                <p class="label-text mb-3 font-semibold">Delivery Time</p>
+                <input
+                  type="text"
+                  class="input input-bordered input-primary disabled:bg-transparent disabled:text-black disabled:border-primary"
+                  value="Dhaka"
+                />
+              </label>
+              <label class="form-control w-full">
+                <p class="label-text mb-3 font-semibold">Delivery Fee</p>
+                <input
+                  type="text"
+                  class="input input-bordered input-primary disabled:bg-transparent disabled:text-black disabled:border-primary"
+                  value="Dhaka"
+                />
+              </label>
+              <button class="btn btn-primary w-fit px-16 text-white text-lg">
+                Add
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhoolai</title>
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body>
+    <div class="flex h-screen">
+      <!-- Sidebar (add this to header.ejs file) -->
+      <div
+        class="w-[17%] shadow flex flex-col py-10 max-w-[405px] overflow-y-auto sidebar"
+      >
+        <img src="../assets/logo.png" class="h-14 w-fit self-center" alt="" />
+        <ul class="ps-14 mt-10 flex flex-col gap-y-7">
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/user-list-icon.png"
+                alt=""
+                class="w-6 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">User List</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/banners-icon.png" alt="" class="w-6 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Banners</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/add-location-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Add Location</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/category-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Category</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/special-offer-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Special Icon</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/products-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Products</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/support-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Support</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/contact-us-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Contact Us</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/settings-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Settings</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/agent-list-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Agents List</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/laundry-shop-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Laundry Shop</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/orders-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Orders</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/withdraw-balance-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Withdraw Balance</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/payment-history-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Payment History</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-grow py-12 px-10 h-full overflow-y-auto w-[80%]">
+        <!-- header section -->
+        <div class="flex justify-end items-center gap-x-6">
+          <div class="flex items-center gap-x-3">
+            <img src="../assets/user.png" alt="" class="w-14" />
+            <p class="font-bold text-xl">Admin</p>
+          </div>
+          <button class="btn btn-ghost btn-primary text-xl text-primary">
+            Logout
+          </button>
+        </div>
+
+        <div class="mt-16">
+          <div class="flex items-center justify-between border-b pb-7">
+            <p class="text-3xl text-base-300 font-semibold">Special Offer</p>
+            <div class="flex gap-x-5">
+              <a
+                href="/src/add-category.html"
+                class="btn btn-primary text-white px-12"
+              >
+                <i class="bi bi-plus text-2xl"></i>
+                Add Offer
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="overflow-x-auto grid grid-cols-3 gap-20 mt-10 shadow rounded-lg p-10"
+          >
+            <div
+              class="shadow bg-[#8060EA] rounded-lg text-white relative p-10"
+            >
+              <p class="text-2xl font-semibold mt-16">25%</p>
+              <p class="text-xl font-bold mt-5 mb-7">Today’s Special!</p>
+              <p class="font-bangla text-xl">
+                Get discount for every order. Only valid for today
+              </p>
+
+              <img
+                src="../assets/offer-1.png"
+                class="absolute top-0 right-0 w-[60%]"
+                alt=""
+              />
+
+              <a
+                href="/src/edit-category.html"
+                class="absolute top-0 right-0 btn btn-outline btn-primary text-lg bg-white"
+              >
+                <i class="bi bi-pencil-fill"></i>
+              </a>
+            </div>
+
+            <div
+              class="shadow bg-[#C4640A] rounded-lg text-white relative p-10"
+            >
+              <p class="text-2xl font-semibold mt-16">25%</p>
+              <p class="text-xl font-bold mt-5 mb-7">Today’s Special!</p>
+              <p class="font-bangla text-xl">
+                Get discount for every order. Only valid for today
+              </p>
+
+              <img
+                src="../assets/offer-1.png"
+                class="absolute top-0 right-0 w-[60%]"
+                alt=""
+              />
+
+              <a
+                href="/src/edit-category.html"
+                class="absolute top-0 right-0 btn btn-outline btn-primary text-lg bg-white"
+              >
+                <i class="bi bi-pencil-fill"></i>
+              </a>
+            </div>
+            <div
+              class="shadow bg-[#1CADB2] rounded-lg text-white relative p-10"
+            >
+              <p class="text-2xl font-semibold mt-16">25%</p>
+              <p class="text-xl font-bold mt-5 mb-7">Today’s Special!</p>
+              <p class="font-bangla text-xl">
+                Get discount for every order. Only valid for today
+              </p>
+
+              <img
+                src="../assets/offer-1.png"
+                class="absolute top-0 right-0 w-[60%]"
+                alt=""
+              />
+
+              <a
+                href="/src/edit-category.html"
+                class="absolute top-0 right-0 btn btn-outline btn-primary text-lg bg-white"
+              >
+                <i class="bi bi-pencil-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

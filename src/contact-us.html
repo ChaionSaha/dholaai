@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhoolai</title>
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body>
+    <div class="flex h-screen">
+      <!-- Sidebar (add this to header.ejs file) -->
+      <div
+        class="w-[17%] shadow flex flex-col py-10 max-w-[405px] overflow-y-auto sidebar"
+      >
+        <img src="../assets/logo.png" class="h-14 w-fit self-center" alt="" />
+        <ul class="ps-14 mt-10 flex flex-col gap-y-7">
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/user-list-icon.png"
+                alt=""
+                class="w-6 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">User List</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/banners-icon.png" alt="" class="w-6 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Banners</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/add-location-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Add Location</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/category-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Category</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/special-offer-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Special Icon</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/products-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Products</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/support-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Support</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/contact-us-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Contact Us</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/settings-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Settings</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/agent-list-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Agents List</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/laundry-shop-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Laundry Shop</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img src="../assets/orders-icon.png" alt="" class="w-5 h-fit" />
+              <p class="text-base-300 font-bold text-xl">Orders</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/withdraw-balance-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Withdraw Balance</p>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center gap-x-5">
+              <img
+                src="../assets/payment-history-icon.png"
+                alt=""
+                class="w-5 h-fit"
+              />
+              <p class="text-base-300 font-bold text-xl">Payment History</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-grow py-12 px-10 h-full overflow-y-auto">
+        <!-- header section -->
+        <div class="flex justify-end items-center gap-x-6">
+          <div class="flex items-center gap-x-3">
+            <img src="../assets/user.png" alt="" class="w-14" />
+            <p class="font-bold text-xl">Admin</p>
+          </div>
+          <button class="btn btn-ghost btn-primary text-xl text-primary">
+            Logout
+          </button>
+        </div>
+
+        <div class="mt-16">
+          <div class="flex items-center justify-between border-b pb-7">
+            <p class="text-3xl text-base-300 font-semibold">Contact Us</p>
+            <div class="flex gap-x-5">
+              <select class="select select-bordered select-primary">
+                <option disabled selected>Status</option>
+                <option>Star Wars</option>
+                <option>Harry Potter</option>
+                <option>Lord of the Rings</option>
+                <option>Planet of the Apes</option>
+                <option>Star Trek</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto mt-10 shadow rounded-lg">
+            <table class="table">
+              <!-- head -->
+              <thead>
+                <tr class="font-normal text-black text-base">
+                  <td>S. No</td>
+                  <td>Name</td>
+                  <td>Mobile Number</td>
+                  <td>Message</td>
+                  <td>Status</td>
+                  <td>Action</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <div class="flex items-center gap-3">
+                      <div class="avatar">
+                        <div class="mask mask-circle h-12 w-12">
+                          <img
+                            src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                            alt="Avatar Tailwind CSS Component"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div>Hart Hagerty</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>+9912081280912</td>
+                  <td>I need help!</td>
+                  <td class="text-[#057324]">Solved</td>
+                  <td class="flex gap-x-4">
+                    <button
+                      class="btn btn-ghost btn-sm hover:text-white text-primary"
+                    >
+                      <i class="bi bi-file-text-fill text-xl"></i>
+                    </button>
+
+                    <button
+                      onclick="message_details.showModal()"
+                      class="btn btn-primary btn-bordered btn-outline btn-sm hover:text-white"
+                    >
+                      <i class="bi bi-eye-fill"></i>
+                    </button>
+
+                    <button
+                      class="btn btn-primary btn-bordered btn-outline btn-sm hover:text-white"
+                    >
+                      <i class="bi bi-trash-fill"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <div class="flex items-center gap-3">
+                      <div class="avatar">
+                        <div class="mask mask-circle h-12 w-12">
+                          <img
+                            src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                            alt="Avatar Tailwind CSS Component"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div>Hart Hagerty</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>+9912081280912</td>
+                  <td>I need help!</td>
+                  <td class="text-[#D9382E]">Unsolved</td>
+                  <td class="flex gap-x-4">
+                    <button
+                      class="btn btn-ghost btn-sm hover:text-white text-primary"
+                    >
+                      <i class="bi bi-file-text-fill text-xl"></i>
+                    </button>
+
+                    <button
+                      onclick="message_details.showModal()"
+                      class="btn btn-primary btn-bordered btn-outline btn-sm hover:text-white"
+                    >
+                      <i class="bi bi-eye-fill"></i>
+                    </button>
+
+                    <button
+                      class="btn btn-primary btn-bordered btn-outline btn-sm hover:text-white"
+                    >
+                      <i class="bi bi-trash-fill"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="flex items-center justify-between mt-16">
+            <p class="text-base-300">Showing 11 of 800 locations</p>
+            <div class="flex">
+              <button class="btn btn-ghost rounded-lg btn-active">1</button>
+              <button class="btn btn-ghost rounded-lg">2</button>
+              <button class="btn btn-ghost rounded-lg">3</button>
+              <button class="btn btn-ghost rounded-lg">4</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <dialog id="message_details" class="modal">
+      <div class="modal-box">
+        <form method="dialog">
+          <button
+            class="btn btn-sm btn-circle btn-primary absolute right-2 top-2"
+          >
+            ✕
+          </button>
+        </form>
+        <h3 class="text-lg font-bold">Message</h3>
+        <p class="py-4">I need help!</p>
+      </div>
+    </dialog>
+  </body>
+</html>

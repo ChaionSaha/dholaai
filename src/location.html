@@ -9,11 +9,14 @@
   <body>
     <div class="flex h-screen">
       <!-- Sidebar (add this to header.ejs file) -->
-      <div
-        class="w-[17%] shadow flex flex-col py-10 max-w-[405px] overflow-y-auto sidebar"
-      >
+      <div class="sidebar sidebar-hide">
+        <button
+          class="btn btn-outline btn-primary absolute btn-sm self-end me-4 text-xl menu-close"
+        >
+          <i class="bi bi-x"></i>
+        </button>
         <img src="../assets/logo.png" class="h-14 w-fit self-center" alt="" />
-        <ul class="ps-14 mt-10 flex flex-col gap-y-7">
+        <ul class="lg:ps-14 ps-5 mt-10 flex flex-col gap-y-7">
           <li>
             <a href="" class="flex items-center gap-x-5">
               <img
@@ -130,13 +133,19 @@
               <p class="text-base-300 font-bold text-xl">Payment History</p>
             </a>
           </li>
+          <li class="mt-5 lg:hidden text-error">
+            <a href="" class="flex items-center gap-x-5">
+              <i class="bi bi-box-arrow-right text-3xl"></i>
+              <p class="font-bold text-xl">Log Out</p>
+            </a>
+          </li>
         </ul>
       </div>
 
       <!-- Main Content -->
-      <div class="flex-grow py-12 px-10 h-full overflow-y-auto">
+      <div class="main-body">
         <!-- header section -->
-        <div class="flex justify-end items-center gap-x-6">
+        <div class="hidden lg:flex justify-end items-center gap-x-6">
           <div class="flex items-center gap-x-3">
             <img src="../assets/user.png" alt="" class="w-14" />
             <p class="font-bold text-xl">Admin</p>
@@ -146,10 +155,13 @@
           </button>
         </div>
 
-        <div class="mt-16">
-          <div class="flex items-center justify-between border-b pb-7">
+        <div class="lg:mt-16 mt-5">
+          <div class="flex items-center gap-x-10 lg:border-b pb-7">
+            <button class="btn btn-primary btn-sm btn-outline menu-open">
+              <i class="bi bi-list"></i>
+            </button>
             <p class="text-3xl text-base-300 font-semibold">Location</p>
-            <div class="flex gap-x-5">
+            <div class="lg:flex hidden gap-x-5 ms-auto">
               <label class="input input-bordered flex items-center gap-2">
                 <input type="text" class="grow" placeholder="Search" />
                 <svg
@@ -173,6 +185,31 @@
                 Add Location
               </a>
             </div>
+          </div>
+
+          <div class="flex flex-col lg:hidden gap-5 border-b pb-7">
+            <label class="input input-bordered flex items-center gap-2">
+              <input type="text" class="grow" placeholder="Search" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="h-4 w-4 opacity-70"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </label>
+            <a
+              href="/src/add-location.html"
+              class="btn btn-primary text-white px-12"
+            >
+              <i class="bi bi-plus text-2xl"></i>
+              Add Location
+            </a>
           </div>
 
           <div class="overflow-x-auto mt-10 shadow rounded-lg">
@@ -221,7 +258,7 @@
             </table>
           </div>
 
-          <div class="flex items-center justify-between mt-16">
+          <div class="flex flex-col gap-y-5 items-center justify-between mt-16">
             <p class="text-base-300">Showing 11 of 800 locations</p>
             <div class="flex">
               <button class="btn btn-ghost rounded-lg btn-active">1</button>
@@ -234,4 +271,5 @@
       </div>
     </div>
   </body>
+  <script src="../js/script.js"></script>
 </html>

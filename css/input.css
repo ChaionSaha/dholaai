@@ -27,3 +27,23 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.sidebar {
+  @apply lg:w-[17%] w-[100vw] flex flex-col py-10 max-w-[405px] overflow-y-auto fixed top-0 h-screen lg:relative z-30 bg-white duration-300 shadow-lg lg:shadow-none border-e;
+}
+
+.sidebar-hide {
+  @apply translate-x-[-100%] lg:translate-x-0;
+}
+
+.main-body {
+  @apply lg:py-12 py-6 lg:px-10 px-5 h-full overflow-y-auto lg:w-[82.5%] w-full;
+}
+
+.menu-open {
+  @apply block lg:hidden;
+}
+
+.menu-close {
+  @apply block lg:hidden;
+}

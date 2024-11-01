@@ -9,11 +9,14 @@
   <body>
     <div class="flex h-screen">
       <!-- Sidebar (add this to header.ejs file) -->
-      <div
-        class="w-[17%] shadow flex flex-col py-10 max-w-[405px] overflow-y-auto sidebar"
-      >
+      <div class="sidebar sidebar-hide">
+        <button
+          class="btn btn-outline btn-primary absolute btn-sm self-end me-4 text-xl menu-close"
+        >
+          <i class="bi bi-x"></i>
+        </button>
         <img src="../assets/logo.png" class="h-14 w-fit self-center" alt="" />
-        <ul class="ps-14 mt-10 flex flex-col gap-y-7">
+        <ul class="lg:ps-14 ps-5 mt-10 flex flex-col gap-y-7">
           <li>
             <a href="" class="flex items-center gap-x-5">
               <img
@@ -130,13 +133,19 @@
               <p class="text-base-300 font-bold text-xl">Payment History</p>
             </a>
           </li>
+          <li class="mt-5 lg:hidden text-error">
+            <a href="" class="flex items-center gap-x-5">
+              <i class="bi bi-box-arrow-right text-3xl"></i>
+              <p class="font-bold text-xl">Log Out</p>
+            </a>
+          </li>
         </ul>
       </div>
 
       <!-- Main Content -->
-      <div class="flex-grow py-12 px-10 h-full overflow-y-auto">
+      <div class="main-body">
         <!-- header section -->
-        <div class="flex justify-end items-center gap-x-6">
+        <div class="hidden lg:flex justify-end items-center gap-x-6">
           <div class="flex items-center gap-x-3">
             <img src="../assets/user.png" alt="" class="w-14" />
             <p class="font-bold text-xl">Admin</p>
@@ -146,10 +155,13 @@
           </button>
         </div>
 
-        <div class="mt-16">
-          <div class="flex items-center justify-between border-b pb-7">
+        <div class="lg:mt-16 mt-5">
+          <div class="flex items-center gap-x-10 lg:border-b pb-7">
+            <button class="btn btn-primary btn-sm btn-outline menu-open">
+              <i class="bi bi-list"></i>
+            </button>
             <p class="text-3xl text-base-300 font-semibold">Support</p>
-            <div class="flex gap-x-5">
+            <div class="lg:flex hidden gap-x-5 ms-auto">
               <a
                 href="/src/support.html"
                 class="btn btn-primary btn-outline text-white"
@@ -171,6 +183,31 @@
                 <option>Star Trek</option>
               </select>
             </div>
+          </div>
+
+          <div class="flex flex-col lg:hidden gap-5 border-b pb-7">
+            <div class="grid grid-cols-2 gap-5">
+              <a
+                href="/src/support.html"
+                class="btn btn-primary btn-outline text-white"
+              >
+                Customer Support
+              </a>
+              <a
+                href="/src/agent-support.html"
+                class="btn btn-primary text-white"
+              >
+                Agent Support
+              </a>
+            </div>
+            <select class="select select-bordered select-primary">
+              <option disabled selected>Status</option>
+              <option>Star Wars</option>
+              <option>Harry Potter</option>
+              <option>Lord of the Rings</option>
+              <option>Planet of the Apes</option>
+              <option>Star Trek</option>
+            </select>
           </div>
 
           <div class="overflow-x-auto mt-10 shadow rounded-lg">
@@ -273,7 +310,7 @@
             </table>
           </div>
 
-          <div class="flex items-center justify-between mt-16">
+          <div class="flex flex-col gap-y-5 items-center justify-between mt-16">
             <p class="text-base-300">Showing 11 of 800 locations</p>
             <div class="flex">
               <button class="btn btn-ghost rounded-lg btn-active">1</button>
@@ -299,4 +336,5 @@
       </div>
     </dialog>
   </body>
+  <script src="../js/script.js"></script>
 </html>

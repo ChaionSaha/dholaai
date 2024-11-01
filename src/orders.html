@@ -9,11 +9,14 @@
   <body>
     <div class="flex h-screen">
       <!-- Sidebar (add this to header.ejs file) -->
-      <div
-        class="w-[17%] shadow flex flex-col py-10 max-w-[405px] overflow-y-auto sidebar"
-      >
+      <div class="sidebar sidebar-hide">
+        <button
+          class="btn btn-outline btn-primary absolute btn-sm self-end me-4 text-xl menu-close"
+        >
+          <i class="bi bi-x"></i>
+        </button>
         <img src="../assets/logo.png" class="h-14 w-fit self-center" alt="" />
-        <ul class="ps-14 mt-10 flex flex-col gap-y-7">
+        <ul class="lg:ps-14 ps-5 mt-10 flex flex-col gap-y-7">
           <li>
             <a href="" class="flex items-center gap-x-5">
               <img
@@ -130,13 +133,19 @@
               <p class="text-base-300 font-bold text-xl">Payment History</p>
             </a>
           </li>
+          <li class="mt-5 lg:hidden text-error">
+            <a href="" class="flex items-center gap-x-5">
+              <i class="bi bi-box-arrow-right text-3xl"></i>
+              <p class="font-bold text-xl">Log Out</p>
+            </a>
+          </li>
         </ul>
       </div>
 
       <!-- Main Content -->
-      <div class="flex-grow py-12 px-10 h-full overflow-y-auto">
+      <div class="main-body">
         <!-- header section -->
-        <div class="flex justify-end items-center gap-x-6">
+        <div class="hidden lg:flex justify-end items-center gap-x-6">
           <div class="flex items-center gap-x-3">
             <img src="../assets/user.png" alt="" class="w-14" />
             <p class="font-bold text-xl">Admin</p>
@@ -146,10 +155,13 @@
           </button>
         </div>
 
-        <div class="mt-16">
-          <div class="flex items-center justify-between border-b pb-7">
+        <div class="lg:mt-16 mt-5">
+          <div class="flex items-center gap-x-10 lg:border-b pb-7">
+            <button class="btn btn-primary btn-sm btn-outline menu-open">
+              <i class="bi bi-list"></i>
+            </button>
             <p class="text-3xl text-base-300 font-semibold">Orders</p>
-            <div class="flex gap-x-5">
+            <div class="hidden lg:flex gap-x-5 ms-auto">
               <select class="select select-bordered select-primary">
                 <option disabled selected>Status</option>
                 <option>Star Wars</option>
@@ -160,8 +172,18 @@
               </select>
             </div>
           </div>
+          <div class="flex lg:hidden gap-x-5 border-b pb-7">
+            <select class="select select-bordered select-primary w-full">
+              <option disabled selected>Status</option>
+              <option>Star Wars</option>
+              <option>Harry Potter</option>
+              <option>Lord of the Rings</option>
+              <option>Planet of the Apes</option>
+              <option>Star Trek</option>
+            </select>
+          </div>
 
-          <div class="overflow-x-auto mt-10 shadow rounded-lg">
+          <div class="mt-10 lg:p-0 shadow rounded-lg">
             <div class="flex m-5 mb-10 gap-x-5">
               <a href="/src/support.html" class="btn btn-primary text-white">
                 Generate CSV
@@ -173,67 +195,69 @@
                 Download Invoice
               </a>
             </div>
-            <table class="table">
-              <!-- head -->
-              <thead>
-                <tr class="font-normal text-black text-base">
-                  <td>
-                    <label>
-                      <input type="checkbox" class="checkbox" />
-                    </label>
-                  </td>
-                  <td>S. No</td>
-                  <td>Order ID</td>
-                  <td>Agent ID</td>
-                  <td>Laundry Shop</td>
-                  <td>Service Category</td>
-                  <td>Quantity of Laundry</td>
-                  <td>Order Date</td>
-                  <td>Price</td>
-                  <td>Last Status Change</td>
-                  <td>Status</td>
-                  <td>Action</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <label>
-                      <input type="checkbox" class="checkbox" />
-                    </label>
-                  </td>
-                  <td>1</td>
-                  <td>102912</td>
-                  <td>AkajsAU</td>
-                  <td>Ecowash</td>
-                  <td>Iron, Wash & Iron</td>
-                  <td>3 shirts</td>
-                  <td>11/09/24</td>
-                  <td>250 BDT</td>
-                  <td>25 hour 13 min ago</td>
-                  <td>
-                    <p class="badge badge-success py-4 px-2 rounded-lg">
-                      Confirmed
-                    </p>
-                  </td>
-                  <td class="flex gap-x-4">
-                    <button
-                      class="btn btn-primary btn-bordered btn-outline btn-sm hover:text-white"
-                    >
-                      <i class="bi bi-pencil-fill"></i>
-                    </button>
-                    <button
-                      class="btn btn-primary btn-bordered btn-outline btn-sm hover:text-white"
-                    >
-                      <i class="bi bi-eye-fill"></i>
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="overflow-x-auto">
+              <table class="table">
+                <!-- head -->
+                <thead>
+                  <tr class="font-normal text-black text-base">
+                    <td>
+                      <label>
+                        <input type="checkbox" class="checkbox" />
+                      </label>
+                    </td>
+                    <td>S. No</td>
+                    <td>Order ID</td>
+                    <td>Agent ID</td>
+                    <td>Laundry Shop</td>
+                    <td>Service Category</td>
+                    <td>Quantity of Laundry</td>
+                    <td>Order Date</td>
+                    <td>Price</td>
+                    <td>Last Status Change</td>
+                    <td>Status</td>
+                    <td>Action</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <label>
+                        <input type="checkbox" class="checkbox" />
+                      </label>
+                    </td>
+                    <td>1</td>
+                    <td>102912</td>
+                    <td>AkajsAU</td>
+                    <td>Ecowash</td>
+                    <td>Iron, Wash & Iron</td>
+                    <td>3 shirts</td>
+                    <td>11/09/24</td>
+                    <td>250 BDT</td>
+                    <td>25 hour 13 min ago</td>
+                    <td>
+                      <p class="badge badge-success py-4 px-2 rounded-lg">
+                        Confirmed
+                      </p>
+                    </td>
+                    <td class="flex gap-x-4">
+                      <button
+                        class="btn btn-primary btn-bordered btn-outline btn-sm hover:text-white"
+                      >
+                        <i class="bi bi-pencil-fill"></i>
+                      </button>
+                      <button
+                        class="btn btn-primary btn-bordered btn-outline btn-sm hover:text-white"
+                      >
+                        <i class="bi bi-eye-fill"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <div class="flex items-center justify-between mt-16">
+          <div class="flex flex-col gap-y-5 items-center justify-between mt-16">
             <p class="text-base-300">Showing 11 of 800 locations</p>
             <div class="flex">
               <button class="btn btn-ghost rounded-lg btn-active">1</button>
@@ -246,4 +270,5 @@
       </div>
     </div>
   </body>
+  <script src="../js/script.js"></script>
 </html>
